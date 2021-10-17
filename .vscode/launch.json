@@ -1,0 +1,138 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "app01",
+            "cwd": "app01",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "app01 (profile mode)",
+            "cwd": "app01",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "app02",
+            "cwd": "app02",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "app02 (profile mode)",
+            "cwd": "app02",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "app03",
+            "cwd": "app03",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "app03 (profile mode)",
+            "cwd": "app03",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "app04carros",
+            "cwd": "app04carros",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "app04carros (profile mode)",
+            "cwd": "app04carros",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "app05_imc",
+            "cwd": "app05_imc",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "app05_imc (profile mode)",
+            "cwd": "app05_imc",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "app05_navegacao",
+            "cwd": "app05_navegacao",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "app05_navegacao (profile mode)",
+            "cwd": "app05_navegacao",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "app07_navigationbar",
+            "cwd": "app07_navigationbar",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "app07_navigationbar (profile mode)",
+            "cwd": "app07_navigationbar",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "app08_listview",
+            "cwd": "app08_listview",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "app08_listview (profile mode)",
+            "cwd": "app08_listview",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "atv_pratc1",
+            "cwd": "atv_pratc1",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "atv_pratc1 (profile mode)",
+            "cwd": "atv_pratc1",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "myapp",
+            "cwd": "myapp",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "myapp (profile mode)",
+            "cwd": "myapp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        }
+    ]
+}
