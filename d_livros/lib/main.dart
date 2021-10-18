@@ -241,7 +241,6 @@ class _GenresState extends State<Genres> {
                 color: Colors.white,
               ),
               title: Text('Romance'),
-              
               tileColor: Colors.pink,
             ),
             ListTile(
@@ -424,7 +423,8 @@ class Menu extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.logout),
             title: Text('Sair'),
-            onTap: () => {Navigator.popUntil(context, ModalRoute.withName('login'))},
+            onTap: () =>
+                {Navigator.popUntil(context, ModalRoute.withName('login'))},
           ),
         ],
       ),
@@ -552,28 +552,94 @@ class Livros extends StatelessWidget {
         body: Container(
             //width: double.infinity,
             padding: EdgeInsets.fromLTRB(0, 20, 10, 10),
-            child: GridView.count(
-              crossAxisCount: 2,
-              crossAxisSpacing: 5,
-              mainAxisSpacing: 5,
-              children: [
-                InkWell(
-                    child: Container(
-                      height: 400,
-                      width: 200,
-                      child: Image.asset('lib/jogos_vorazes_1.jpg'),
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Widgetlivro(
-                                  'Suzane Collins',
-                                  'lib/jogos_vorazes_1.jpg',
-                                  'A história ocorre em um futuro pós-apocalíptico e é narrada em primeira pessoa pela personagem Katniss Everdeen. O enredo do livro se desenvolve sob a sua rotina e sua relação com o melhor amigo, Gale (que possui um amor platônico por ela), a irmã Primrose e sua mãe.',
-                                  'Jogos Vorazes')));
-                    })
-              ],
+            child: Scrollbar(
+              child: GridView.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                children: [
+                  InkWell(
+                      child: Container(
+                        height: 400,
+                        width: 200,
+                        child: Image.asset('lib/jogos_vorazes_1.jpg'),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Widgetlivro(
+                                    'Suzane Collins',
+                                    'lib/jogos_vorazes_1.jpg',
+                                    'A história ocorre em um futuro pós-apocalíptico e é narrada em primeira pessoa pela personagem Katniss Everdeen. O enredo do livro se desenvolve sob a sua rotina e sua relação com o melhor amigo, Gale (que possui um amor platônico por ela), a irmã Primrose e sua mãe.',
+                                    'Jogos Vorazes')));
+                      }),
+                  InkWell(
+                      child: Container(
+                        height: 400,
+                        width: 200,
+                        child: Image.asset('lib/opp.jpg'),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Widgetlivro(
+                                    'Antoine de Saint-Exupéry',
+                                    'lib/opp.jpg',
+                                    'Um piloto cai com seu avião no deserto e ali encontra uma criança loura e frágil. Ela diz ter vindo de um pequeno planeta distante. E ali, na convivência com o piloto perdido, os dois repensam os seus valores e encontram o sentido da vida.',
+                                    'O Pequeno Príncipe')));
+                      }),
+                  InkWell(
+                      child: Container(
+                        height: 400,
+                        width: 200,
+                        child: Image.asset('lib/anne.jpg'),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Widgetlivro(
+                                    'Anne Frank',
+                                    'lib/anne.jpg',
+                                    'O diário de Anne Frank, o depoimento da pequena Anne, morta pelos nazistas após passar anos escondida no sótão de uma casa em Amsterdã, ainda hoje emociona leitores no mundo inteiro. Suas anotações narram os sentimentos, os medos e as pequenas alegrias de uma menina judia que, como sua família, lutou em vão para sobreviver ao Holocausto.Uma poderosa lembrança dos horrores de uma guerra, um testemunho eloquente do espírito humano. Assim podemos descrever os relatos feitos por Anne em seu diário. Isolados do mundo exterior, os Frank enfrentaram a fome, o tédio e a terrível realidade do confinamento, além da ameaça constante de serem descobertos.',
+                                    'O Diário de Anne Frank')));
+                      }),
+                  InkWell(
+                      child: Container(
+                        height: 400,
+                        width: 200,
+                        child: Image.asset('lib/omdvu.jpg'),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Widgetlivro(
+                                    'Emily Brontë',
+                                    'lib/omdvu.jpg',
+                                    'O morro dos ventos uivantes retrata uma trágica historia de amor e obsessão em que os personagens principais são a obstinada e geniosa Catherine Earnshaw e seu irmão adotivo, Heathcliff. Grosseiro, humilhado e rejeitado, ele guarda apenas rancor no coração, mas tem com Catherine um relaciona- mento marcado por amor e, ao mesmo tempo, ódio. Essa ligação perdura mesmo com o casamento de Catherine com Edgar Linton.',
+                                    'O Morro dos Ventos Uivantes')));
+                      }),
+                  InkWell(
+                      child: Container(
+                        height: 400,
+                        width: 200,
+                        child: Image.asset('lib/pride.jpg'),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Widgetlivro(
+                                    'Jane Austen',
+                                    'lib/pride.jpg',
+                                    'A história de Orgulho e Preconceito gira em torno das cinco irmãs Bennet, que viviam na área rural do interior da Inglaterra, no século XVIII. Aborda a questão da sucessão em uma família sem homens, dentro de uma sociedade patriarcal, onde o casamento era fundamental para as mulheres. Assim, quando um homem rico e solteiro se muda para os arredores, a vida pacata da família entra em ebulição.',
+                                    'Orgulho e Preconceito')));
+                      }),
+                ],
+              ),
             )));
   }
 }
@@ -688,7 +754,8 @@ class Widgetlivro extends StatelessWidget {
                                 actions: [
                                   OutlinedButton(
                                       onPressed: () {
-                                        Navigator.popAndPushNamed(context, 'rastreio');
+                                        Navigator.popAndPushNamed(
+                                            context, 'rastreio');
                                       },
                                       child: Text('ok!'),
                                       style: OutlinedButton.styleFrom(
@@ -730,12 +797,13 @@ class _RastreioState extends State<Rastreio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Container(
-      width: double.infinity,
-      child: Image.asset('lib/map.route.png', width: double.infinity,),
-    ));
+        appBar: AppBar(),
+        body: Container(
+          width: double.infinity,
+          child: Image.asset(
+            'lib/map.route.png',
+            width: double.infinity,
+          ),
+        ));
   }
 }
-
-

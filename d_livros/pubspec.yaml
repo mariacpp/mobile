@@ -54,6 +54,10 @@ flutter:
     - lib/dlivros.png
     - lib/jogos_vorazes_1.jpg
     - lib/map.route.png
+    - lib/opp.jpg
+    - lib/anne.jpg
+    - lib/omdvu.jpg
+    - lib/pride.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
