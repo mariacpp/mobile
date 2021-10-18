@@ -1,6 +1,17 @@
-# myapp
+# d_livros
 
-A new Flutter project.
+Aplicativo feito em flutter. Seu objetivo é permitir que uma biblioteca vire também um delivery, ou seja, 
+as pessoas podem alugar livros em qualquer lugar e a qualquer horário através do seu dispositivo mobile. 
+
+
+
+
+
+
+
+
+
+
 
 ## Getting Started
 
