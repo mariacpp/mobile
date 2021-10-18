@@ -644,6 +644,9 @@ class Livros extends StatelessWidget {
   }
 }
 
+//
+// WIDGET LIVRO
+//
 class Widgetlivro extends StatelessWidget {
   final String capa;
   final String titulo;
@@ -786,6 +789,9 @@ class Widgetlivro extends StatelessWidget {
   }
 }
 
+//
+// RATREAR PEDIDO
+//
 class Rastreio extends StatefulWidget {
   const Rastreio({Key? key}) : super(key: key);
 
