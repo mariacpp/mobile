@@ -666,6 +666,7 @@ class Widgetlivro extends StatelessWidget {
         child: Container(
           width: double.infinity,
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
                 this.capa,
