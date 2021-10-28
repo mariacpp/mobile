@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "273982125912",
+    "project_id": "flutter-aula-2e234",
+    "storage_bucket": "flutter-aula-2e234.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273982125912:android:1867b82febd76f0403572d",
+        "android_client_info": {
+          "package_name": "com.example.loja_cafe_app09"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "273982125912-8ahnahvbd7k4j5jjrgdsu69eeu1ha82o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN321pAgel5xYdnAr98C61tbcec1cw5n4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "273982125912-8ahnahvbd7k4j5jjrgdsu69eeu1ha82o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
