@@ -1,4 +1,32 @@
-import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart'
+    show
+        AppBar,
+        BuildContext,
+        Colors,
+        Container,
+        EdgeInsets,
+        FontWeight,
+        Icon,
+        Icons,
+        InputDecoration,
+        Key,
+        ListView,
+        MainAxisAlignment,
+        Navigator,
+        OutlinedButton,
+        Row,
+        Scaffold,
+        ScaffoldMessenger,
+        SizedBox,
+        SnackBar,
+        State,
+        StatefulWidget,
+        Text,
+        TextEditingController,
+        TextField,
+        TextStyle,
+        Widget;
 
 class CriarContaPage extends StatefulWidget {
   const CriarContaPage({Key? key}) : super(key: key);
@@ -98,5 +126,27 @@ class _CriarContaPageState extends State<CriarContaPage> {
   //
   // CRIAR CONTA no Firebase Auth
   //
-  void criarConta(nome, email, senha) {}
+  void criarConta(nome, email, senha) {
+    FirebaseAuth.instance
+        .createUserWithEmailAndPassword(email: email, password: senha)
+        .then((value) {
+      exibirmsg('Usuário criado com sucesso!');
+      Navigator.pop(context);
+    }).catchError((erro) {
+      if (erro.code == 'email-already-in-use') {
+        exibirmsg('ERRO: O email informado já está em uso!');
+      } else {
+        exibirmsg('ERRO: ${erro.message}');
+      }
+    });
+  }
+
+  void exibirmsg(msg) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: msg,
+        duration: Duration(seconds: 2),
+      ),
+    );
+  }
 }
