@@ -6,6 +6,7 @@ import 'package:flutter/material.dart'
         BuildContext,
         Colors,
         Container,
+        FloatingActionButton,
         IconButton,
         Icons,
         Key,
@@ -19,8 +20,9 @@ import 'package:flutter/material.dart'
         runApp;
 import 'package:flutter/widgets.dart';
 
-import 'criar_conta.dart';
-import 'login.dart';
+import 'cadastro.dart';
+import 'pages/criar_conta.dart';
+import 'pages/login.dart';
 
 Future<void> main() async {
   //
@@ -37,6 +39,7 @@ Future<void> main() async {
         '/login': (context) => LoginPage(),
         '/criar_conta': (context) => CriarContaPage(),
         '/principal': (context) => PrincipalPage(),
+        '/cadastro': (context) => CadastroPage(),
       },
     ),
   );
@@ -68,6 +71,14 @@ class _PrincipalPageState extends State<PrincipalPage> {
       ),
       backgroundColor: Colors.brown.shade100,
       body: Container(),
+      floatingActionButton: FloatingActionButton(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.brown,
+        child: Icon(Icons.add),
+        onPressed: () {
+          Navigator.pushNamed(context, '/cadastro');
+        },
+      ),
     );
   }
 }
