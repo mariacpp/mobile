@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "443287257192",
+    "project_id": "d-livros",
+    "storage_bucket": "d-livros.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443287257192:android:2ad9a303d234ff99797bdd",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443287257192-a288sspih5tc1ksq67v2fphguu2f6leg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR1Bhme_33d5IKCbVx0lVeTf-BcunnnNc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443287257192-a288sspih5tc1ksq67v2fphguu2f6leg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
