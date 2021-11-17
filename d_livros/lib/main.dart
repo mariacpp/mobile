@@ -215,8 +215,10 @@ class Menu extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.logout),
             title: Text('Sair'),
-            onTap: () =>
-                {Navigator.popUntil(context, ModalRoute.withName('login'))},
+            onTap: () async => {
+              FirebaseAuth.instance.signOut(),
+              Navigator.pushReplacementNamed(context, 'login')
+            },
           ),
         ],
       ),
