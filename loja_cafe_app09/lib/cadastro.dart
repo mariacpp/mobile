@@ -12,8 +12,33 @@ class _CadastroPageState extends State<CadastroPage> {
   var txtNome = TextEditingController();
   var txtPreco = TextEditingController();
 
+  //
+  // RETORNAR um ÚNICO DOCUMENTO a partir do ID
+  //
+  getDocumentById(id) async {
+    await FirebaseFirestore.instance
+        .collection('cafes')
+        .doc(id)
+        .get()
+        .then((doc) {
+      txtNome.text = doc.get('nome');
+      txtPreco.text = doc.get('preco');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    //
+    // RECUPERAR o ID do Café que foi selecionado pelo usuário
+    //
+    var id = ModalRoute.of(context)?.settings.arguments;
+
+    if (id != null) {
+      if (txtNome.text.isEmpty && txtPreco.text.isEmpty) {
+        getDocumentById(id);
+      }
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Café Store'),
@@ -52,10 +77,27 @@ class _CadastroPageState extends State<CadastroPage> {
                 child: OutlinedButton(
                   child: Text('salvar'),
                   onPressed: () {
-                    FirebaseFirestore.instance.collection('cafes').add({
-                      'nome': txtNome.text,
-                      'preco': txtPreco.text,
-                    });
+                    if (id == null) {
+                      //
+                      // ADICIONAR um NOVO DOCUMENTO
+                      //
+                      FirebaseFirestore.instance.collection('cafes').add({
+                        'nome': txtNome.text,
+                        'preco': txtPreco.text,
+                      });
+                    } else {
+                      //
+                      // ATUALIZAR UM DOCUMENTO EXISTENTE
+                      //
+                      FirebaseFirestore.instance
+                          .collection('cafes')
+                          .doc(id.toString())
+                          .set({
+                        'nome': txtNome.text,
+                        'preco': txtPreco.text,
+                      });
+                    }
+
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content: Text('Operação realizada com sucesso!'),
