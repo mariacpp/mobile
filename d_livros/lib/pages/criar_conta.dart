@@ -60,6 +60,7 @@ class _CadastroState extends State<Cadastro> {
               ),
               TextFormField(
                 controller: txtSenha,
+                obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Senha',
                   border: OutlineInputBorder(),
@@ -73,7 +74,10 @@ class _CadastroState extends State<Cadastro> {
                 height: 40,
                 child: ElevatedButton(
                   onPressed: () {
-                    criarConta(txtNome.text, txtEmail.text, txtSenha.text);
+                    criarConta(
+                      txtEmail.text,
+                      txtSenha.text,
+                    );
                   },
                   child: Text('registrar'),
                   style: ElevatedButton.styleFrom(
@@ -115,7 +119,7 @@ class _CadastroState extends State<Cadastro> {
     );
   }
 
-  void criarConta(nome, email, senha) {
+  void criarConta(email, senha) {
     FirebaseAuth.instance
         .createUserWithEmailAndPassword(email: email, password: senha)
         .then((value) {

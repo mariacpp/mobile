@@ -51,6 +51,7 @@ class _LoginState extends State<Login> {
               ),
               TextFormField(
                 controller: txtSenha,
+                obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Senha',
                   focusColor: Colors.lightGreen[100],
